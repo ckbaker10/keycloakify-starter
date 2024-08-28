@@ -4,7 +4,7 @@ import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import "../assets/css/emailcode/main.css";
 
-export default function OtpForm(props: PageProps<Extract<KcContext, { pageId: "email-code-form.ftl" }>, I18n>) {
+export default function EmailOtpForm(props: PageProps<Extract<KcContext, { pageId: "email-code-form.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
 
     const { kcClsx } = getKcClsx({
@@ -82,14 +82,14 @@ export default function OtpForm(props: PageProps<Extract<KcContext, { pageId: "e
                             value={msgStr("doSubmit")}
                         />
                         <input
-                            className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonLargeClass")}
+                            className={kcClsx("kcButtonClass", "kcButtonDefaultClass", "kcButtonLargeClass")}
                             name="resend"
                             id="kc-resend"
                             type="submit"
                             value={msgStr("doResend")}
                         />
                         <input
-                            className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonLargeClass")}
+                            className={kcClsx("kcButtonClass", "kcButtonDefaultClass", "kcButtonLargeClass")}
                             name="cancel"
                             id="kc-cancel"
                             type="submit"

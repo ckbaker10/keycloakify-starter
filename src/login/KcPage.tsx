@@ -5,7 +5,7 @@ import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
 import Template from "keycloakify/login/Template";
 import "./main.css"
-import OtpForm from "./pages/EmailCode";
+import EmailOtpForm from "./pages/EmailCode";
 const UserProfileFormFields = lazy(
     () => import("keycloakify/login/UserProfileFormFields")
 );
@@ -23,7 +23,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                 switch (kcContext.pageId) {
                     case "email-code-form.ftl":
                         return (
-                            <OtpForm
+                            <EmailOtpForm
                                 {...{ kcContext, i18n, classes }}
                                 Template={Template}
                                 doUseDefaultCss={true}
